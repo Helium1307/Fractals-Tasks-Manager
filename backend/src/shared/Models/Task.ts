@@ -1,20 +1,14 @@
 import mongoose from "mongoose";
 
 const TaskSchema = new mongoose.Schema({
-  username: {
+  description: {
     type: String,
     required: true,
   },
-  email: {
+  status: {
     type: String,
     required: true,
-  },
-  password: {
-    type: String,
-    required: true,
-  },
-  isAdmin: {
-    type: Boolean,
-    default: false,
   },
 });
+
+export default mongoose.model("Task", TaskSchema);
